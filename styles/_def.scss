@@ -1,0 +1,21 @@
+$default-background-color: #f0f0f0;
+$default-border-color: #676676;
+$default-font-color: #2b2d2f;
+
+@mixin flex($flex-direction, $justify-content, $align-items, $gap: 0) {
+  align-items: $align-items;
+  display: flex;
+  flex-direction: $flex-direction;
+  gap: $gap;
+  justify-content: $justify-content;
+
+  > * {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  > .-stretch {
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+}

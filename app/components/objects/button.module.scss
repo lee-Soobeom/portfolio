@@ -1,0 +1,9 @@
+@use "../../../styles/def" as def;
+
+.button {
+  @include def.flex(row, center, center);
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  padding: 0.25rem 0.75rem;
+}

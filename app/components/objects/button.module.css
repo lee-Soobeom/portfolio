@@ -1,0 +1,23 @@
+.button {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  justify-content: center;
+}
+.button > * {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.button > .-stretch {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.button {
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  padding: 0.25rem 0.75rem;
+}
+
+/*# sourceMappingURL=button.module.css.map */

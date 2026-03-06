@@ -1,0 +1,44 @@
+@use "sass:color";
+@use "../../../styles/def" as def;
+@use "../../../styles/mixin" as responsive;
+
+.container {
+  @include def.flex(row, center, center);
+  top: 0;
+  width: 100%;
+  background-color: def.$default-background-color;
+  border-bottom: 0.0625rem solid lighten(def.$default-border-color, 55%);
+  color: inherit;
+  font: inherit;
+  font-size: 1.625rem;
+  font-weight: 400;
+  padding: 1.25rem 0;
+  position: fixed;
+  z-index: 3;
+
+  > div {
+    width: 0.0625rem;
+    height: 1.125rem;
+    background-color: def.$default-font-color;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 0 4rem;
+  }
+}
+
+@include responsive.mobile {
+  .container {
+    width: 100%;
+    font-size: 1.125rem;
+    font-weight: 500;
+    padding: 1rem 0 1rem 0;
+    position: fixed;
+
+    > div {
+      height: 0.875rem;
+      margin: 0 0.5rem;
+    }
+  }
+}
+
+
